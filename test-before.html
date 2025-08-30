@@ -6,6 +6,7 @@
         </head>
         <body>
             <script type="text/javascript">
+                console.time();
                 function toOneDimension(previousValue, currentValue) {
                     return previousValue.concat(currentValue);
                 }
@@ -14,7 +15,7 @@
                 ['B1','B2','B3'],
                 ['C1','C2','C3']
                 ];
-                
+
                 var sampleArrayB = sampleArrayA.reduce(toOneDimension);//sampleArrayA：対象の配列
                 
                 for (var counterVar = 0; counterVar<sampleArrayB.length; counterVar++) {
@@ -22,6 +23,13 @@
                     document.write(sampleArrayB[counterVar]);
                     document.write('<br/>');
                 }
+                console.log(sampleArrayA);
+                console.log(sampleArrayB);
+                console.log(sampleArrayB.length);
+                console.dir(sampleArrayB);
+                console.table(sampleArrayA);
+                console.table(sampleArrayB);
+                console.timeEnd();
                 </script>
     </body>
     </html>
@@ -30,5 +38,6 @@
     toOneDimension：2つの配列をくっつける関数
     previousValue：今までの結果
     currentValue：現在処理されている要素
+    concat:配列や文字列を結合するためのメソッド
     reduceメソッド：配列要素を左から右へ（最初から最後まで）関数適用、まとめて1つにする→まとめて処理の時便利
     -->
