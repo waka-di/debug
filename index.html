@@ -14,9 +14,9 @@
                 ['A1','A2','A3'],
                 ['B1','B2','B3'],
                 ['C1','C2','C3']
-                ].reverse();
+                ];
 
-                var sampleArrayB = sampleArrayA.reduce(toOneDimension);//sampleArrayA：対象の配列
+                var sampleArrayB = sampleArrayA.slice().reverse().reduce(toOneDimension);//sampleArrayA：対象の配列
                 
                 for (var counterVar = 0; counterVar<sampleArrayB.length; counterVar++) {
                     document.write('sampleArrayB['+counterVar +']:');
